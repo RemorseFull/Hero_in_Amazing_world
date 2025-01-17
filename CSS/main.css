@@ -1,0 +1,173 @@
+@import "./reset.css";
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+/*
+.montserrat-<uniquifier> {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.dm-sans-<uniquifier> {
+  font-family: "DM Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+  
+.mulish-<uniquifier> {
+  font-family: "Mulish", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+*/
+
+
+
+html, body{
+    font-family: "Mulish", serif;
+    letter-spacing: -0.5PX;
+    color: #000000;
+    overflow: hidden; /* Димас */
+}
+
+
+/* Шапка */ 
+
+.container{
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: 1200px;
+}
+
+.nav {
+    padding: 20px 0;
+    border-bottom: 1px solid #000000 ;
+    background-color: #100059;
+    color: #FFF;
+    letter-spacing: normal;
+}
+
+.nav-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 30px;
+    row-gap: 20px;
+    flex-wrap: wrap;
+}
+
+.logo{
+    color: #FFF;
+    font-size: 24px;
+    font-family: "Montserrat", serif;
+}
+
+.nav-list{
+display: flex;
+align-items: center;
+column-gap: 40px;
+font-size: 16px;
+font-weight: 500;
+font-family: "Montserrat", serif;
+}
+
+.nav-list__link{
+color: #FFF;
+transition: opacity 0.2s ease-in;
+}
+
+.nav-list__link :hover{
+    opacity: 0.8;
+}
+
+.nav-list__link--active{
+    position: relative;
+}
+
+.nav-list__link--active::before{
+    content: "";
+
+    position: absolute;
+    left: 0;
+    top: 100%;
+
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: #00979c;
+}
+
+
+/* Титульный лист */
+
+
+.header{
+    padding: 40px 0;
+    min-height: 695px;
+    height: 92.5vh; /* Димас*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #17007e;
+    background-image: url('./../image/Unity_image.png');
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center center;
+    color: #FFF;
+    text-align: center;
+}
+
+
+.header__box{
+    padding: 0 15px;
+    max-width: 660px;
+}
+
+.header__title{
+    font-size: 30PX;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+.header__title strong {
+   font-size: 40px;
+   font-weight: 700;
+}
+
+.header__text{
+    margin-bottom: 40px;
+    font-size: 18px;
+    line-height: 1.333;
+}
+
+.header__text p + p{
+    margin-top: 1em;
+}
+
+.btn{
+
+    display: inline-block;
+    height: 48px;
+    padding: 12px 28px;
+    border-radius: 5px;
+    background-color: #00979c;
+    color: #FFF;
+    font-family: "Montserrat", serif;
+    letter-spacing: 0.15px;
+    font-weight: 500;
+    transition: opacity 0.2s ease-in;
+}
+
+.btn:hover{
+    opacity: 0.8;
+}
+
+.btn:active {
+    position: relative;
+    top: 1px;
+}
